@@ -17,5 +17,9 @@
 	<insert id="create">
 		insert into board(b_id, title, writer, content) values (board_seq.nextval, #{title}, #{writer}, #{content})
 	</insert>
+	
+	<update id="update">
+		update board set title = #{title}, writer = #{writer}, content = #{content}, update_date = sysdate where b_id = #{b_id}
+	</update>
 
 </mapper>
