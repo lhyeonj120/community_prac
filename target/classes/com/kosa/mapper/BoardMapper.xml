@@ -21,5 +21,9 @@
 	<update id="update">
 		update board set title = #{title}, writer = #{writer}, content = #{content}, update_date = sysdate where b_id = #{b_id}
 	</update>
+	
+	<delete id="remove">
+		delete from board where b_id = #{b_id}
+	</delete>
 
 </mapper>
