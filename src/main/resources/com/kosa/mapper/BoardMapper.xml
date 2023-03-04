@@ -13,5 +13,9 @@
 	<select id="get" resultType="com.kosa.domain.BoardVO">
 		select * from board where b_id = #{b_id}
 	</select>
+	
+	<insert id="create">
+		insert into board(b_id, title, writer, content) values (board_seq.nextval, #{title}, #{writer}, #{content})
+	</insert>
 
 </mapper>
