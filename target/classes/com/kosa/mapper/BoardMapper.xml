@@ -9,5 +9,9 @@
 	<select id="getList" resultType="com.kosa.domain.BoardVO">
 		select * from board
 	</select>
+	
+	<select id="get" resultType="com.kosa.domain.BoardVO">
+		select * from board b_id = #{b_id}
+	</select>
 
 </mapper>
