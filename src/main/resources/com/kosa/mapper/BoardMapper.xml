@@ -11,7 +11,7 @@
 	</select>
 	
 	<select id="get" resultType="com.kosa.domain.BoardVO">
-		select * from board b_id = #{b_id}
+		select * from board where b_id = #{b_id}
 	</select>
 
 </mapper>
