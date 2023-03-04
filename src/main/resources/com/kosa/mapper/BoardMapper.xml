@@ -18,6 +18,13 @@
 		insert into board(b_id, title, writer, content) values (board_seq.nextval, #{title}, #{writer}, #{content})
 	</insert>
 	
+	<insert id="createSelectKey">
+		<selectKey keyProperty="b_id" order="BEFORE" resultType="int">
+			select board_seq.nextval from dual
+		</selectKey>
+		insert into board(b_id, title, writer, content) values (#{b_id}, #{title}, #{writer}, #{content})
+	</insert>
+	
 	<update id="update">
 		update board set title = #{title}, writer = #{writer}, content = #{content}, update_date = sysdate where b_id = #{b_id}
 	</update>
