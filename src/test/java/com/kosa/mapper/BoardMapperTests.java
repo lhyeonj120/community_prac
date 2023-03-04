@@ -17,24 +17,35 @@ public class BoardMapperTests {
 	@Autowired
 	private BoardMapper mapper;
 	
-	@Test
-	public void getListTest() {
-		mapper.getList().forEach(board -> log.info(board));
-	}
+//	@Test
+//	public void getListTest() {
+//		mapper.getList().forEach(board -> log.info(board));
+//	}
+//	
+//	@Test
+//	public void getTest() {
+//		log.info(mapper.get(1));
+//	}
+//	
+//	@Test
+//	public void createTest() {
+//		BoardVO board = new BoardVO();
+//		board.setTitle("새로운 글 작성");
+//		board.setWriter("hj");
+//		board.setContent("새로운 내용 작성~");
+//		mapper.create(board);
+//		
+//		log.info(board);
+//	}
 	
 	@Test
-	public void getTest() {
-		log.info(mapper.get(1));
-	}
-	
-	@Test
-	public void createTest() {
+	public void updateTest() {
 		BoardVO board = new BoardVO();
-		board.setTitle("새로운 글 작성");
-		board.setWriter("hj");
-		board.setContent("새로운 내용 작성~");
-		mapper.create(board);
+		board.setB_id(1);
+		board.setTitle("수정한 제목");
+		board.setContent("수정한 내용입니다료");
+		board.setWriter("Lee");
 		
-		log.info(board);
+		log.info("update count : " + mapper.update(board));
 	}
 }
