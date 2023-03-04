@@ -19,4 +19,9 @@ public class BoardMapperTests {
 	public void getListTest() {
 		mapper.getList().forEach(board -> log.info(board));
 	}
+	
+	@Test
+	public void getTest() {
+		log.info(mapper.get(1));
+	}
 }
