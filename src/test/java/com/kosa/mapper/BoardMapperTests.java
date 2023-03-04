@@ -37,15 +37,20 @@ public class BoardMapperTests {
 //		
 //		log.info(board);
 //	}
+//	
+//	@Test
+//	public void updateTest() {
+//		BoardVO board = new BoardVO();
+//		board.setB_id(1);
+//		board.setTitle("수정한 제목");
+//		board.setContent("수정한 내용입니다료");
+//		board.setWriter("Lee");
+//		
+//		log.info("update count : " + mapper.update(board));
+//	}
 	
 	@Test
-	public void updateTest() {
-		BoardVO board = new BoardVO();
-		board.setB_id(1);
-		board.setTitle("수정한 제목");
-		board.setContent("수정한 내용입니다료");
-		board.setWriter("Lee");
-		
-		log.info("update count : " + mapper.update(board));
+	public void removeTest() {
+		log.info("delete count : " + mapper.remove(2));
 	}
 }
