@@ -16,7 +16,7 @@
 			<c:forEach items="${list}" var="board">
 				<!-- Post preview-->
 				<div class="post-preview">
-					<a href="/board/get">
+					<a class="move" href="<c:out value='${board.b_id}'/>">
 						<h2 class="post-title">
 							<c:choose>
 								<c:when test="${fn:length(board.title) gt 11}">
@@ -46,7 +46,9 @@
 				<!-- Divider-->
 				<hr class="my-4" />
 			</c:forEach>
-				
+			
+			<form id="actionForm" action="/board/list" method="get">
+			</form>
 			
 			<!-- Pager-->
 			<div class="d-flex justify-content-end mb-4">

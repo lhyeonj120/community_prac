@@ -26,4 +26,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         scrollPos = currentTop;
     });
+    
+    var actionForm = $("#actionForm");
+    $(".move").on("click", function(e){
+    	e.preventDefault();
+    	
+    	actionForm.append("<input type='hidden' name='b_id' value='" + $(this).attr("href") + "'>");
+    	actionForm.attr("action", "/board/get");
+    	actionForm.submit();
+    });
+    
 })
