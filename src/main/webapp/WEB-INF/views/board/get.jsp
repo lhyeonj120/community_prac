@@ -12,7 +12,9 @@
 <div class="container px-4 px-lg-5">
 	<div class="row gx-4 gx-lg-5 justify-content-center">
 		<div class="col-md-10 col-lg-8 col-xl-7">
-		
+		<p>Posted On <fmt:formatDate pattern="yyyy.MM.dd hh:mm" value="${board.regdate}"/></p>
+		<p>Updated On <fmt:formatDate pattern="yyyy.MM.dd hh:mm" value="${board.update_date}"/></p>
+	
 	            <div class="my-5">
 	                <!-- * * * * * * * * * * * * * * *-->
 	                <!-- * * SB Forms Contact Form * *-->
@@ -52,14 +54,10 @@
 	                    <!-- an error submitting the form-->
 	                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
 	                    <!-- Submit Button-->
-	                    <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
+	                    <button class="btn btn-primary text-uppercase" data-oper="modify" onclick="location.href='/board/modify?b_id=<c:out value="${board.b_id}"/>'">Modify</button>
+	                    <button class="btn btn-primary text-uppercase" data-oper="list" onclick="location.href='/board/list'">List</button>
 
 	            </div>
-			
-			<!-- Pager-->
-			<div class="d-flex justify-content-end mb-4">
-				<a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a>
-			</div>
 		</div>
 	</div>
 </div>
