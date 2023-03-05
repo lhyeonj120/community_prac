@@ -34,10 +34,10 @@
 	                        <div class="invalid-feedback">A writer is required.</div>
 	                    </div>
 	                    <div class="form-floating">
-	                        <input class="form-control" id="content" name="content" type="text" placeholder="Enter content..." />
-	                        <label for="content">Content</label>
-	                        <div class="invalid-feedback">A content is required.</div>
-	                    </div>
+                        	<textarea class="form-control" id="content" name="content" placeholder="Enter content here..." style="height: 12rem"></textarea>
+                        	<label for="content">Content</label>
+                            <div class="invalid-feedback">A content is required.</div>
+                        </div>
 	                    <br />
 	                    <!-- Submit success message-->
 	                    <!---->
