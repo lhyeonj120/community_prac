@@ -40,9 +40,6 @@
                         	<label for="content">Content</label>
                             <div class="invalid-feedback">A content is required.</div>
                         </div>
-
-                        <input class="form-control" id="regdate" name="regdate" value="<fmt:formatDate pattern="yyyy.MM.dd" value="${board.regdate}"/>" type="hidden"/>
-                        <input class="form-control" id="update_date" name="update_date" value="<fmt:formatDate pattern="yyyy.MM.dd" value="${board.update_date}"/>" type="hidden"/>
                         
                         <br />
 	                    <!-- Submit success message-->
