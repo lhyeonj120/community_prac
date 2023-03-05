@@ -25,7 +25,7 @@ public class BoardController {
 		model.addAttribute("list", service.getList());
 	}
 	
-	@GetMapping("/get")
+	@GetMapping({"/get", "/modify"})
 	public void get(@RequestParam("b_id") int b_id, Model model) {
 		model.addAttribute("board", service.get(b_id));
 	}

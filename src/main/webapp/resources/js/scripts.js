@@ -36,4 +36,19 @@ window.addEventListener('DOMContentLoaded', () => {
     	actionForm.submit();
     });
     
+    var formObj = $("form");
+    $('button').on("click", function(e){
+    	e.preventDefault();
+    	var operation = $(this).data("oper");
+    	
+    	if(operation === "remove"){
+    		formObj.attr("action", "/board/remove");
+    	}
+    	else if(operation === "list"){
+    		self.location = "/board/list";
+    		return;
+    	}
+    	formObj.submit();
+    });
+    
 })
